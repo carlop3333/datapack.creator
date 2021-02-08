@@ -7,7 +7,7 @@ package data;
 
 /**
  *
- * @author macmini
+ * @author carlop3333
  */
 public class DatapackCreatorUI extends javax.swing.JFrame {
 
@@ -27,50 +27,143 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        bienvenido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         textoeditar1 = new javax.swing.JTextArea();
-        jScrollBar1 = new javax.swing.JScrollBar();
+        boton1 = new javax.swing.JButton();
+        guardar = new javax.swing.JButton();
+        MainBar = new javax.swing.JMenuBar();
+        archivo = new javax.swing.JMenu();
+        nuevo = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        editar = new javax.swing.JMenu();
+        ayuda = new javax.swing.JMenu();
+        acercade = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Hannotate SC", 0, 13)); // NOI18N
-        jLabel1.setText("A datapack creator ");
+        bienvenido.setFont(new java.awt.Font("Hannotate SC", 0, 13)); // NOI18N
+        bienvenido.setText("A datapack creator ");
 
         textoeditar1.setColumns(20);
         textoeditar1.setRows(5);
-        textoeditar1.setText("Put your text here");
         jScrollPane1.setViewportView(textoeditar1);
+
+        boton1.setText("Delete text");
+        boton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton1MouseClicked(evt);
+            }
+        });
+
+        guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/save2x.png"))); // NOI18N
+
+        archivo.setText("File");
+
+        nuevo.setText("New");
+        nuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevoActionPerformed(evt);
+            }
+        });
+        archivo.add(nuevo);
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/save1x.png"))); // NOI18N
+        jMenuItem1.setText("Save ");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        archivo.add(jMenuItem1);
+
+        MainBar.add(archivo);
+
+        editar.setText("Edit");
+        MainBar.add(editar);
+
+        ayuda.setText("Help");
+        ayuda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ayudaMouseClicked(evt);
+            }
+        });
+
+        acercade.setText("About...");
+        acercade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acercadeActionPerformed(evt);
+            }
+        });
+        ayuda.add(acercade);
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/web1x.png"))); // NOI18N
+        jMenuItem2.setText("Github repository");
+        ayuda.add(jMenuItem2);
+
+        MainBar.add(ayuda);
+
+        setJMenuBar(MainBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(261, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(350, 350, 350))
+                        .addComponent(guardar)
+                        .addContainerGap())
+                    .addComponent(boton1, javax.swing.GroupLayout.Alignment.TRAILING)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(92, 285, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15))))
+                        .addComponent(bienvenido)
+                        .addGap(332, 332, 332))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(bienvenido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(guardar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boton1)
+                .addGap(8, 8, 8))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void boton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseClicked
+        // TODO add your handling code here:
+       this.textoeditar1.setText("");
+    }//GEN-LAST:event_boton1MouseClicked
+
+    private void ayudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ayudaMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ayudaMouseClicked
+
+    private void acercadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_acercadeActionPerformed
+
+    private void nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nuevoActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,9 +201,19 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JMenuBar MainBar;
+    private javax.swing.JMenuItem acercade;
+    private javax.swing.JMenu archivo;
+    private javax.swing.JMenu ayuda;
+    private javax.swing.JLabel bienvenido;
+    private javax.swing.JButton boton1;
+    private javax.swing.JMenu editar;
+    private javax.swing.JButton guardar;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem nuevo;
     private javax.swing.JTextArea textoeditar1;
     // End of variables declaration//GEN-END:variables
 }
+
