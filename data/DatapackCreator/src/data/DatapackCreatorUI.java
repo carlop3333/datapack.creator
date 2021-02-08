@@ -5,6 +5,12 @@
  */
 package data;
 
+import java.awt.Desktop;
+import java.io.*;
+import java.net.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author carlop3333
@@ -39,7 +45,7 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         editar = new javax.swing.JMenu();
         ayuda = new javax.swing.JMenu();
         acercade = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        githubr = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,9 +104,19 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         });
         ayuda.add(acercade);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/web1x.png"))); // NOI18N
-        jMenuItem2.setText("Github repository");
-        ayuda.add(jMenuItem2);
+        githubr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/web1x.png"))); // NOI18N
+        githubr.setText("Github repository");
+        githubr.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                githubrMouseClicked(evt);
+            }
+        });
+        githubr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                githubrActionPerformed(evt);
+            }
+        });
+        ayuda.add(githubr);
 
         MainBar.add(ayuda);
 
@@ -111,21 +127,18 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(285, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(guardar)
                         .addContainerGap())
-                    .addComponent(boton1, javax.swing.GroupLayout.Alignment.TRAILING)))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(92, 285, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(boton1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(bienvenido)
-                        .addGap(332, 332, 332))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addGap(332, 332, 332))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,6 +177,24 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void githubrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_githubrMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_githubrMouseClicked
+
+    private void githubrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_githubrActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+            String myurl = "https://github.com/carlop3333/datapack.creator/";
+            
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(myurl));
+            
+        } catch (Exception e2) {
+            //TODO handle exception
+            e2.printStackTrace();
+        }  
+    }//GEN-LAST:event_githubrActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,12 +239,20 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
     private javax.swing.JLabel bienvenido;
     private javax.swing.JButton boton1;
     private javax.swing.JMenu editar;
+    private javax.swing.JMenuItem githubr;
     private javax.swing.JButton guardar;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuItem nuevo;
     private javax.swing.JTextArea textoeditar1;
     // End of variables declaration//GEN-END:variables
+
+
 }
+    
+
+
+
+    
+
 
