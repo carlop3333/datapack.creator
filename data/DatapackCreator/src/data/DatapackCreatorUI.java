@@ -36,13 +36,20 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         bienvenido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         textoeditar1 = new javax.swing.JTextArea();
-        boton1 = new javax.swing.JButton();
         guardar = new javax.swing.JButton();
+        boton1 = new javax.swing.JButton();
         MainBar = new javax.swing.JMenuBar();
         archivo = new javax.swing.JMenu();
         nuevo = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        salir = new javax.swing.JMenuItem();
         editar = new javax.swing.JMenu();
+        copy = new javax.swing.JMenuItem();
+        paste = new javax.swing.JMenuItem();
+        cut = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        delete_all = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
         ayuda = new javax.swing.JMenu();
         acercade = new javax.swing.JMenuItem();
         githubr = new javax.swing.JMenuItem();
@@ -56,17 +63,30 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         textoeditar1.setRows(5);
         jScrollPane1.setViewportView(textoeditar1);
 
+        guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/save2x.png"))); // NOI18N
+        guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarActionPerformed(evt);
+            }
+        });
+
+        boton1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        boton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/backspace1x.png"))); // NOI18N
         boton1.setText("Delete text");
         boton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 boton1MouseClicked(evt);
             }
         });
-
-        guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/save2x.png"))); // NOI18N
+        boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1ActionPerformed(evt);
+            }
+        });
 
         archivo.setText("File");
 
+        nuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/new1x.png"))); // NOI18N
         nuevo.setText("New");
         nuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,9 +104,55 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         });
         archivo.add(jMenuItem1);
 
+        salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/exit1x.png"))); // NOI18N
+        salir.setText("Exit");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+        archivo.add(salir);
+
         MainBar.add(archivo);
 
         editar.setText("Edit");
+
+        copy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/copy1x.png"))); // NOI18N
+        copy.setText("Copy");
+        copy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                copyActionPerformed(evt);
+            }
+        });
+        editar.add(copy);
+
+        paste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/paste1x.png"))); // NOI18N
+        paste.setText("Paste");
+        paste.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pasteActionPerformed(evt);
+            }
+        });
+        editar.add(paste);
+
+        cut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/cut1x.png"))); // NOI18N
+        cut.setText("Cut");
+        editar.add(cut);
+        editar.add(jSeparator1);
+
+        delete_all.setBackground(new java.awt.Color(255, 0, 0));
+        delete_all.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/delete_all1x.png"))); // NOI18N
+        delete_all.setText("Delete All (TOO DANGEROUS)");
+        delete_all.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_allActionPerformed(evt);
+            }
+        });
+        editar.add(delete_all);
+        delete_all.getAccessibleContext().setAccessibleDescription("");
+
+        editar.add(jSeparator2);
+
         MainBar.add(editar);
 
         ayuda.setText("Help");
@@ -130,27 +196,29 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
                 .addContainerGap(285, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(bienvenido)
+                        .addGap(332, 332, 332))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(guardar)
                         .addContainerGap())
-                    .addComponent(boton1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(bienvenido)
-                        .addGap(332, 332, 332))))
+                        .addComponent(boton1)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(bienvenido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(guardar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(boton1)
-                .addGap(8, 8, 8))
+                .addComponent(boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -196,6 +264,31 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         }  
     }//GEN-LAST:event_githubrActionPerformed
 
+    private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarActionPerformed
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton1ActionPerformed
+
+    private void delete_allActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_allActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delete_allActionPerformed
+
+    private void copyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_copyActionPerformed
+
+    private void pasteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pasteActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        // TODO add your handling code here:
+        this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_salirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -238,12 +331,19 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
     private javax.swing.JMenu ayuda;
     private javax.swing.JLabel bienvenido;
     private javax.swing.JButton boton1;
+    private javax.swing.JMenuItem copy;
+    private javax.swing.JMenuItem cut;
+    private javax.swing.JMenuItem delete_all;
     private javax.swing.JMenu editar;
     private javax.swing.JMenuItem githubr;
     private javax.swing.JButton guardar;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JMenuItem nuevo;
+    private javax.swing.JMenuItem paste;
+    private javax.swing.JMenuItem salir;
     private javax.swing.JTextArea textoeditar1;
     // End of variables declaration//GEN-END:variables
 
