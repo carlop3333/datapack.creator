@@ -1,5 +1,5 @@
 ## Como crear un data pack
-El editor aun no esta terminado (Recomiendo usar Notepad++ o VS Code)
+El editor aún no esta terminado (Recomiendo usar Notepad++ o VS Code)
 
 1. Crea una carpeta con un nombre (Obviamente)
 2. Crea un archivo llamado pack.mcmeta <---- **Importante** con esta plantilla:
