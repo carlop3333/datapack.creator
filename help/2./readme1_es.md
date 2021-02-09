@@ -37,4 +37,4 @@ En el editor, debeis guiaros de esta planilla (otra vez, lo se)
 }
 ```
 
-[Mas informacion de los logros aqui]()
+[Mas informacion de los logros aqui](https://github.com/carlop3333/datapack.creator/blob/main/help/2./readme_more_es.md)
