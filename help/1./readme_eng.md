@@ -14,8 +14,11 @@ The editor is not finished so you can do a datapack in a Notepad ( I recomend us
 
 ### In the "pack_format":
 _7_ is for Minecraft 1.17
+
 _6_ is for Minecraft 1.16
+
 _5_ is for Minecraft 1.15
+
 _4_ is for Minecraft 1.14-1.13
 
 Thats the begining to create datapacks
