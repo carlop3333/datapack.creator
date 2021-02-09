@@ -4,14 +4,13 @@ El editor aún no esta terminado (Recomiendo usar Notepad++ o VS Code)
 1. Crea una carpeta con un nombre (Obviamente)
 2. Crea un archivo llamado pack.mcmeta <---- **Importante** con esta plantilla:
 
-'''
+```
 {
   "pack": {
     "pack_format": 6,
     "description": "**A datapack example**"
   }
-}
-'''
+```
 
 ### En el "pack_format":
 _7_ is for Minecraft 1.17
