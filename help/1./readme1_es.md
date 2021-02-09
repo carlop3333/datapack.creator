@@ -24,4 +24,4 @@ _4_ es para Minecraft 1.14-1.13
 
 Ese es el principio para crear datapacks
 
-[Continuar](https://github.com)
+[Continuar](https://github.com/carlop3333/datapack.creator/blob/main/help/1./readme2_es.md)
