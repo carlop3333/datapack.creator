@@ -4,11 +4,11 @@ Once you have done the **pack.mcmeta** you must test it in the game, when creati
 
 It should come out like this:
 
-! [image](https://raw.githubusercontent.com/carlop3333/datapack.creator/main/help/1./imgs/img1.png)
+![image](https://raw.githubusercontent.com/carlop3333/datapack.creator/main/help/1./imgs/img1.png)
 
 Now that the datapack has appeared, you must (in the original folder) create another folder called **data**, such that:
 
-! [image](https://raw.githubusercontent.com/carlop3333/datapack.creator/main/help/1./imgs/img2.png)
+![image](https://raw.githubusercontent.com/carlop3333/datapack.creator/main/help/1./imgs/img2.png)
 
 We would enter the ** data ** folder and we would have many possibilities such as making Achievements, functions (they are like commands that do not have to be executed in a lot of command blocks, but in one (they are limited)), being able to create mobs, etc etc.
 
