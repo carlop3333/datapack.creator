@@ -35,3 +35,5 @@ trigger : El disparador de este avance; especifica lo que el juego debe verifica
  experience : una cantidad de experiencia .
  
  function : una función para ejecutar. No se permiten etiquetas de función .
+
+ Algunos ejemplos:

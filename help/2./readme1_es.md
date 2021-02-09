@@ -12,30 +12,29 @@ En el editor, debeis guiaros de esta planilla (otra vez, lo se)
 
 ```
 {
-  "parent": "minecraft:"
-  "display": {
-    "title": {
-      "text": "A datapack example"
-    },
-    "description": {
-      "text": "A datapack example"
-    },
-    "icon": {
-      "item": "minecraft:grass"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-    {
-  "criteria": {
-    "example": {
-      "trigger": "minecraft:impossible"
+    "parent": {
+    "display": {
+      "title": {
+        "text": "A datapack example"
+      },
+      "description": {
+        "text": "A datapack example"
+      },
+      "icon": {
+        "item": "minecraft:grass"
+      },
+      "frame": "goal",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false,
+      
+    "criteria": {
+      "example": {
+        "trigger": "minecraft:impossible"
       }
+     }
     }
-  }
 }
-
 ```
 
 [Mas informacion de los logros aqui]()
