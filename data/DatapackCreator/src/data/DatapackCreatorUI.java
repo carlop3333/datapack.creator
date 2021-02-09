@@ -304,7 +304,7 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             
-            String myurl = "https://github.com/carlop3333/datapack.creator/";
+            String myurl = "https://github.com/carlop3333/datapack.creator/blob/main/help/start.md";
             
             java.awt.Desktop.getDesktop().browse(java.net.URI.create(myurl));
             
