@@ -10,7 +10,7 @@ Now that the datapack has appeared, you must (in the original folder) create ano
 
 ![image](https://raw.githubusercontent.com/carlop3333/datapack.creator/main/help/1./imgs/img2.png)
 
-We would enter the ** data ** folder and we would have many possibilities such as making Achievements, functions (they are like commands that do not have to be executed in a lot of command blocks, but in one (they are limited)), being able to create mobs, etc etc.
+We would enter the **data** folder and we would have many possibilities such as making Achievements, functions (they are like commands that do not have to be executed in a lot of command blocks, but in one (they are limited)), being able to create mobs, etc etc.
 
 Here I leave you more tutorials so that you can learn each one:
 
