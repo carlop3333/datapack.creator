@@ -1,5 +1,5 @@
 # Help & more...
 
-[1.Getting Started] (github.com/carlop3333)
+[1.Getting Started] (https://github.com/carlop3333)
 
 ## More coming soon...
