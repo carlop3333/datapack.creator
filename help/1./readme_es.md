@@ -2,6 +2,7 @@
 El editor aún no esta terminado (Recomiendo usar Notepad++ o VS Code)
 
 1. Crea una carpeta con un nombre (Obviamente)
+
 2. Crea un archivo llamado pack.mcmeta <---- **Importante** con esta plantilla:
 
 ```
@@ -23,4 +24,4 @@ _4_ es para Minecraft 1.14-1.13
 
 Ese es el principio para crear datapacks
 
-[Continue](https://github.com)
+[Continuar](https://github.com)
