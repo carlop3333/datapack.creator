@@ -1,5 +1,5 @@
 # Help & more...
 
-[1. Getting Started](https://github.com/carlop3333)
+[1. Getting Started](https://github.com/carlop3333/datapack.creator/blob/main/help/1./1g.md)
 
 ## More coming soon...
