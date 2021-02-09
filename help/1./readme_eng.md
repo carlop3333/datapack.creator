@@ -3,14 +3,14 @@ The editor is not finished so you can do a datapack in a Notepad ( I recomend us
 
 1. create a folder with a name (Obviously)
 2. Create a pack.mcmeta <---- **Important** with this template:
-'''
+```
 {
   "pack": {
     "pack_format": 6,
-    "description": "**A datapack example**"
+    "description": "A datapack example"
   }
 }
-'''
+```
 
 ### In the "pack_format":
 _7_ is for Minecraft 1.17
