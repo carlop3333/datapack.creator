@@ -1,4 +1,4 @@
-## Como crear un data pack
+# Como crear un data pack
 El editor aún no esta terminado (Recomiendo usar Notepad++ o VS Code)
 
 1. Crea una carpeta con un nombre (Obviamente)
