@@ -8,7 +8,7 @@ El editor aún no esta terminado (Recomiendo usar Notepad++ o VS Code)
 {
   "pack": {
     "pack_format": 6,
-    "description": "**A datapack example**"
+    "description": "A datapack example"
   }
 ```
 
