@@ -51,6 +51,8 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
         delete_all = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         ayuda = new javax.swing.JMenu();
+        help = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
         acercade = new javax.swing.JMenuItem();
         githubr = new javax.swing.JMenuItem();
 
@@ -161,6 +163,16 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
                 ayudaMouseClicked(evt);
             }
         });
+
+        help.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icns/help1x.png"))); // NOI18N
+        help.setText("Help & more");
+        help.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpActionPerformed(evt);
+            }
+        });
+        ayuda.add(help);
+        ayuda.add(jSeparator3);
 
         acercade.setText("About...");
         acercade.addActionListener(new java.awt.event.ActionListener() {
@@ -286,8 +298,21 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
         // TODO add your handling code here:
-        this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
     }//GEN-LAST:event_salirActionPerformed
+
+    private void helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpActionPerformed
+        // TODO add your handling code here:
+                try {
+            
+            String myurl = "https://github.com/carlop3333/datapack.creator/";
+            
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(myurl));
+            
+        } catch (Exception e2) {
+            //TODO handle exception
+            e2.printStackTrace();
+        }  
+    }//GEN-LAST:event_helpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -337,10 +362,12 @@ public class DatapackCreatorUI extends javax.swing.JFrame {
     private javax.swing.JMenu editar;
     private javax.swing.JMenuItem githubr;
     private javax.swing.JButton guardar;
+    private javax.swing.JMenuItem help;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenuItem nuevo;
     private javax.swing.JMenuItem paste;
     private javax.swing.JMenuItem salir;
