@@ -10,6 +10,8 @@ Al grano...
 
 En el editor, debeis guiaros de esta planilla (otra vez, lo se)
 
+
+(no lo hagais, esta mal D:)
 ```
 {
     "parent": {
