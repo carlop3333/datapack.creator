@@ -8,9 +8,6 @@ assignees: ''
 ---
 
 **What do you want me to add?**
-:
+
 
 **You have a file to contribute?**
-File to contribute: 
-
-**Describe alternatives you've considered**
